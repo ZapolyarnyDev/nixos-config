@@ -27,5 +27,10 @@
 				}
 			];
 		};
+		homeConfigurations.zapolyarny-x380 = home-manager.lib.homeManagerConfiguration {
+			pkgs = nixpkgs.legacyPackages.${system};
+			modules = [ ./home/zapolyarny.nix ];
+		};
+
 	};
 }
