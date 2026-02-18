@@ -9,15 +9,14 @@
 
 	outputs = { self, nixpkgs, home-manager, ... }:
 	let
-		system = "x86_64-linux"l
+		system = "x86_64-linux";
 	in {
 		nixosConfigurations.zapolyarny-x380 = nixpkgs.lib.nixosSystem {
 			inherit system;
 			
 			modules = [
 				./hosts/zapolyarny-x380/configuration.nix
-				./hardware-configuration.nix
-
+			
 				home-manager.nixosModules.home-manager {
 					home-manager.useGlobalPkgs = true;
 					home-manager.useUserPackages = true;
