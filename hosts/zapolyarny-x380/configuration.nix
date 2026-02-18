@@ -70,8 +70,7 @@
   
   services.greetd.enable = true;
   services.greetd.settings.default_session = {
-    command = "Hyprland";
-    user = "zapolyarny";
+    command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd ${pkgs.hyprland}/bin/Hyprland";
   };
 
   xdg.portal.enable = true;
