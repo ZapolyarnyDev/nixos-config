@@ -54,6 +54,10 @@
 
   ### programs, hardware ###
 
+  programs.dconf.enable = true;
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+  services.udisks2.enable = true;
   programs.git.enable = true;
   programs.zsh.enable = true;
   programs.gnupg.agent = {
@@ -115,7 +119,20 @@
     playerctl
     libnotify 
     firefox 
-    thunar
+
+    xfce.thunar
+    xfce.thunar-archive-plugin
+    xfce.thunar-volman
+    file-roller
+
+    gtk3
+    dconf
+    glib
+    gsettings-desktop-schemas
+
+    arc-theme
+    papirus-icon-theme
+    lxappearance
 ];
 
 
