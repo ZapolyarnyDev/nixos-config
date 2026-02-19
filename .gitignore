@@ -1,2 +1,4 @@
 result
 *.qcow2
+/hosts/*/hardware-configuration.nix
+hardware-configuration.nix
