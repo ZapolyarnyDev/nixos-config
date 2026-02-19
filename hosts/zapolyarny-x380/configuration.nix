@@ -143,6 +143,7 @@
     })
     xsettingsd
     nwg-look     
+    telegram-desktop
 ];
 
 
