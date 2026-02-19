@@ -134,6 +134,15 @@
     papirus-icon-theme
     papirus-folders
     lxappearance
+
+    (catppuccin-gtk.override {
+	accents = ["pink"];
+        size = "standard";
+        tweaks = [ "rimless" ];
+        variant = "mocha";
+    })
+    xsettingsd
+    nwg-look     
 ];
 
 
