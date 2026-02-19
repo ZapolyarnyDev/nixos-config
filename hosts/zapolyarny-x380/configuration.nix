@@ -132,6 +132,7 @@
 
     arc-theme
     papirus-icon-theme
+    papirus-folders
     lxappearance
 ];
 
