@@ -114,7 +114,8 @@
     slurp
     playerctl
     libnotify 
- ];
+    firefox 
+];
 
 
   ### fonts ###
