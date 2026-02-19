@@ -115,6 +115,7 @@
     playerctl
     libnotify 
     firefox 
+    thunar
 ];
 
 
