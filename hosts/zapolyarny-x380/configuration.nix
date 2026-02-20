@@ -25,13 +25,6 @@
 
   console.keyMap = "us";
 
-  
-
-  ### bluetooth ###
-
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
-
 
   ### users ###
 

@@ -9,5 +9,6 @@
       ../../modules/desktop/hyprland.nix
       ../../modules/desktop/theaming.nix
       ../../modules/services/audio.nix  
-  ];
+      ../../modules/services/bluetooth.nix
+    ];
 }
