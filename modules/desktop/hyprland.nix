@@ -19,7 +19,7 @@
 
   services.greetd.enable = true;
   services.greetd.settings.default_session = {
-     command = "${pkgs.tuigreet}/bin/tuigreet --cmd ${pkgs.hyprland}/bin/Hyprland"
+     command = "${pkgs.tuigreet}/bin/tuigreet --cmd ${pkgs.hyprland}/bin/Hyprland";
   };
 
   xdg.portal.enable = true;
