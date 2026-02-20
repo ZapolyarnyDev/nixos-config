@@ -14,5 +14,6 @@
       ../../modules/system/environment.nix
       ../../modules/system/boot.nix
       ../../modules/system/networking.nix
+      ../../modules/system/regional.nix
     ];
 }
