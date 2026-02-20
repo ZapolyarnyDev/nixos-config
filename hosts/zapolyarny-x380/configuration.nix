@@ -5,14 +5,7 @@
     [
       ./hardware-configuration.nix
     ];
-     
-  ### networking ###
-
-  networking.hostName = "zapolyarny-x380";
-
-  networking.networkmanager.enable = true;
-
-  
+       
   ### i18n & time zone ###
 
   time.timeZone = "Europe/Moscow";
