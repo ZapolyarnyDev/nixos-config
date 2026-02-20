@@ -57,11 +57,6 @@
   environment.systemPackages = with pkgs; [
     playerctl
     libnotify
-
-    xfce.thunar
-    xfce.thunar-archive-plugin
-    xfce.thunar-volman
-    file-roller
   ];
 
   ### nix & system settings ###
