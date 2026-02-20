@@ -92,7 +92,6 @@
 
   environment.systemPackages = with pkgs; [
     pulseaudioFull
-    kitty
     waybar
     rofi
     mako
@@ -101,8 +100,7 @@
     grim
     slurp
     playerctl
-    libnotify 
-    firefox 
+    libnotify
 
     xfce.thunar
     xfce.thunar-archive-plugin
@@ -127,7 +125,6 @@
     })
     xsettingsd
     nwg-look     
-    telegram-desktop
 ];
 
 
