@@ -16,7 +16,7 @@
       ../../modules/system/networking.nix
       ../../modules/system/regional.nix
       ../../modules/system/users.nix
-      ../../modules/system/securtiy.nix
+      ../../modules/system/security.nix
       ../../modules/services/desktop-integration.nix
       ../../modules/system/crypto.nix
       ../../modules/system/nix.nix
