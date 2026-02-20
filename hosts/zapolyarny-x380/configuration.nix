@@ -54,7 +54,6 @@
 
   ### programs, hardware ###
 
-  programs.dconf.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.udisks2.enable = true;
@@ -81,33 +80,6 @@
     xfce.thunar-archive-plugin
     xfce.thunar-volman
     file-roller
-
-    gtk3
-    dconf
-    glib
-    gsettings-desktop-schemas
-
-    arc-theme
-    papirus-icon-theme
-    papirus-folders
-    lxappearance
-
-    (catppuccin-gtk.override {
-	accents = ["pink"];
-        size = "standard";
-        tweaks = [ "rimless" ];
-        variant = "mocha";
-    })
-    xsettingsd
-    nwg-look     
-];
-
-
-  ### fonts ###
-  
-  fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-    nerd-fonts.jetbrains-mono
   ];
 
   ### nix & system settings ###
