@@ -3,18 +3,6 @@
 {
   hardware.graphics.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    playerctl
-    libnotify
-    hyprpaper
-    waybar
-    rofi
-    mako
-    grim
-    slurp
-    wl-clipboard
-  ];
-
   programs.hyprland.enable = true;
 
   services.greetd.enable = true;

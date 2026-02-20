@@ -8,16 +8,7 @@
       curl
       htop
       tree
-      ripgrep
-      fd
-      bat
-      eza
-      tmux
-      zsh
-      starship
-      neofetch	
    ];
 
-   programs.zsh.enable = true;
    programs.git.enable = true;
 }

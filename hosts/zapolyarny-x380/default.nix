@@ -5,7 +5,6 @@
     [
       ./hardware-configuration.nix
       ../../modules/system/cli.nix
-      ../../modules/desktop/apps.nix
       ../../modules/desktop/hyprland.nix
       ../../modules/desktop/theming.nix
       ../../modules/services/audio.nix  
