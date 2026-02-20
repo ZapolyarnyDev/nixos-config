@@ -58,8 +58,6 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.udisks2.enable = true;
-  programs.git.enable = true;
-  programs.zsh.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
@@ -93,20 +91,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    git
-    neovim
-    wget
-    curl
-    htop
-    tree
-    ripgrep
-    fd
-    bat
-    eza
-    tmux
-    zsh
-    starship
-    neofetch
     pulseaudioFull
     kitty
     waybar
