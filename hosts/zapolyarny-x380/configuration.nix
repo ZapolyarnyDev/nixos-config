@@ -8,9 +8,6 @@
 
   ### programs, hardware ###
 
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
-  services.udisks2.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;

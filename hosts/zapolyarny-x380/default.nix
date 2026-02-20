@@ -17,5 +17,6 @@
       ../../modules/system/regional.nix
       ../../modules/system/users.nix
       ../../modules/system/securtiy.nix
+      ../../modules/services/desktop-integration.nix
     ];
 }
