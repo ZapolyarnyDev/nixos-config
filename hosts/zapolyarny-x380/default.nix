@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ ... }:
 
 {
   imports =
@@ -7,7 +7,7 @@
       ../../modules/system/cli.nix
       ../../modules/desktop/apps.nix
       ../../modules/desktop/hyprland.nix
-      ../../modules/desktop/theaming.nix
+      ../../modules/desktop/theming.nix
       ../../modules/services/audio.nix  
       ../../modules/services/bluetooth.nix
       ../../modules/desktop/filemanager.nix
