@@ -7,6 +7,7 @@
       ../../modules/system/cli.nix
       ../../modules/desktop/apps.nix
       ../../modules/desktop/hyprland.nix
-      ../../modules/desktop/theaming.nix  
+      ../../modules/desktop/theaming.nix
+      ../../modules/services/audio.nix  
   ];
 }
