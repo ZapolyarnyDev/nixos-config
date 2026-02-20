@@ -18,5 +18,6 @@
       ../../modules/system/users.nix
       ../../modules/system/securtiy.nix
       ../../modules/services/desktop-integration.nix
+      ../../modules/system/crypto.nix
     ];
 }

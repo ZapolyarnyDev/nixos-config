@@ -6,13 +6,6 @@
       ./hardware-configuration.nix
     ];
 
-  ### programs, hardware ###
-
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
   ### nix & system settings ###
   
   nix.settings.experimental-features = 
