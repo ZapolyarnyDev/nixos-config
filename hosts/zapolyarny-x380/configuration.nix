@@ -47,13 +47,6 @@
 
   security.sudo.wheelNeedsPassword = true;
 
-  ### environment ###
-
-  environment.variables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
-  };
-
   ### nix & system settings ###
   
   nix.settings.experimental-features = 

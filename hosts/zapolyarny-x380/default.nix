@@ -11,5 +11,6 @@
       ../../modules/services/audio.nix  
       ../../modules/services/bluetooth.nix
       ../../modules/desktop/filemanager.nix
+      ../../modules/system/environment.nix
     ];
 }
