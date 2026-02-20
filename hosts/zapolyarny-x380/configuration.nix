@@ -6,15 +6,6 @@
       ./hardware-configuration.nix
     ];
 
-  ### users ###
-
-  users.users.zapolyarny = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
-    shell = pkgs.zsh;
-  };
-
-
   ### programs, hardware ###
 
   services.gvfs.enable = true;
