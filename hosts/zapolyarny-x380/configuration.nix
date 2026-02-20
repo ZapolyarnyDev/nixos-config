@@ -65,24 +65,6 @@
 
   security.sudo.wheelNeedsPassword = true;
 
-  
-  ## Hyprland ##
-  
-  programs.hyprland.enable = true;
-  
-  services.greetd.enable = true;
-  services.greetd.settings.default_session = {
-    command = "${pkgs.tuigreet}/bin/tuigreet --cmd ${pkgs.hyprland}/bin/Hyprland";
-  };
-
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [
-    pkgs.xdg-desktop-portal-hyprland
-  ];
-
-  hardware.graphics.enable = true;
-
-
   ### environment ###
 
   environment.variables = {
@@ -92,13 +74,6 @@
 
   environment.systemPackages = with pkgs; [
     pulseaudioFull
-    waybar
-    rofi
-    mako
-    hyprpaper
-    wl-clipboard
-    grim
-    slurp
     playerctl
     libnotify
 
