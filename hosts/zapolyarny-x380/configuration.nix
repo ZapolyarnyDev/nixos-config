@@ -54,11 +54,6 @@
     VISUAL = "nvim";
   };
 
-  environment.systemPackages = with pkgs; [
-    playerctl
-    libnotify
-  ];
-
   ### nix & system settings ###
   
   nix.settings.experimental-features = 

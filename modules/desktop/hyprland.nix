@@ -4,6 +4,8 @@
   hardware.graphics.enable = true;
 
   environment.systemPackages = with pkgs; [
+    playerctl
+    libnotify
     hyprpaper
     waybar
     rofi
