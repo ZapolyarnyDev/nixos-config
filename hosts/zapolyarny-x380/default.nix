@@ -16,5 +16,6 @@
       ../../modules/system/networking.nix
       ../../modules/system/regional.nix
       ../../modules/system/users.nix
+      ../../modules/system/securtiy.nix
     ];
 }

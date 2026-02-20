@@ -16,8 +16,6 @@
     enableSSHSupport = true;
   };
 
-  security.sudo.wheelNeedsPassword = true;
-
   ### nix & system settings ###
   
   nix.settings.experimental-features = 
