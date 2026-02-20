@@ -20,16 +20,13 @@
 			modules = [
 				./hosts/zapolyarny-x380/configuration.nix
 			
-				home-manager.nixosModules.home-manager {
+				home-manager.nixosModules.home-manager
+ 				{
 					home-manager.useGlobalPkgs = true;
 					home-manager.useUserPackages = true;
 					home-manager.users.zapolyarny = import ./home/zapolyarny.nix;
 				}
 			];
-		};
-		homeConfigurations.zapolyarny-x380 = home-manager.lib.homeManagerConfiguration {
-			pkgs = nixpkgs.legacyPackages.${system};
-			modules = [ ./home/zapolyarny.nix ];
 		};
 
 	};
