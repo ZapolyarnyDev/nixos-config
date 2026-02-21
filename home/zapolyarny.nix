@@ -5,10 +5,8 @@
 	home.homeDirectory = "/home/zapolyarny";
 	home.stateVersion = "25.11";
  
-	programs.zsh.enable = true;
 	programs.starship.enable = true;      
 	programs.home-manager.enable = true;
-	programs.dconf.enable = true;
 
 	home.packages = with pkgs; [
 		# CLI
@@ -35,12 +33,7 @@
 			size = "standard";
 			tweaks = [ "rimless" ];
 			variant = "mocha"; 
-		});
+		})
 		
-	];
-	
-	fonts.packages = with pkgs; [
-		nerd-fonts.fira-code
-		nerd-fonts.jetbrains-mono
 	];
 }
