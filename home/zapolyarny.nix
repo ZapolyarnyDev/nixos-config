@@ -16,6 +16,7 @@
 		firefox
 		telegram-desktop
 		kitty
+		vscodium
 
 		# Wayland Tools
 		waybar rofi mako hyprpaper
