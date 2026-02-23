@@ -19,5 +19,6 @@
       ../../modules/services/desktop-integration.nix
       ../../modules/system/crypto.nix
       ../../modules/system/nix.nix
+      ../../modules/services/clash-verge.nix
     ];
 }
