@@ -19,6 +19,6 @@
       ../../modules/services/desktop-integration.nix
       ../../modules/system/crypto.nix
       ../../modules/system/nix.nix
-      ../../modules/services/sing-box.nix
+      ../../modules/services/mihomo.nix
     ];
 }

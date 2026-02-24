@@ -2,8 +2,14 @@
 
 {
   environment.systemPackages = with pkgs; [
-    sing-box
+    mihomo
   ];
+
+  services.mihomo = {
+    enable = true;
+    tunMode = true;
+    configFile = "/home/zapolyarny/.config/mihomo/config.yaml";
+  };
 
   boot.kernelModules = [ "tun" ];
 
