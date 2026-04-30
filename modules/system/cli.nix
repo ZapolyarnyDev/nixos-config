@@ -9,6 +9,7 @@
       curl
       htop
       tree
+      just
    ];
 
    programs.git.enable = true;
