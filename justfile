@@ -29,6 +29,11 @@ lint:
   nix run nixpkgs#statix -- check .
   nix run nixpkgs#deadnix -- --fail .
 
+fix-lint:
+  nix run nixpkgs#deadnix -- --edit .
+  nix run nixpkgs#statix -- fix .
+  nix fmt {{ flake }}
+
 clean:
   sudo nix-collect-garbage --delete-older-than 7d
   nix store optimise
