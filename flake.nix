@@ -12,7 +12,7 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    inputs@{ nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
@@ -22,6 +22,10 @@
 
       nixosConfigurations.zapolyarny-x380 = nixpkgs.lib.nixosSystem {
         inherit system;
+
+        specialArgs = {
+          inherit inputs;
+        };
 
         modules = [
           ./hosts/zapolyarny-x380/configuration.nix

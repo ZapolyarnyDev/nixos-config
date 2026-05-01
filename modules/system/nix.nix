@@ -1,8 +1,15 @@
-_:
+{ lib, inputs, ... }:
 
+let
+  flakeInputs = lib.filterAttrs (_: value: value ? outPath) inputs;
+in
 {
   nix = {
     channel.enable = false;
+
+    registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+
+    nixPath = lib.mapAttrsToList (name: value: "${name}=flake:${value.outPath}") flakeInputs;
 
     gc = {
       automatic = true;
