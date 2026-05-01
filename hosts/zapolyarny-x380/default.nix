@@ -18,6 +18,7 @@
     ../../modules/services/desktop-integration.nix
     ../../modules/system/crypto.nix
     ../../modules/system/nix.nix
+    ../../modules/system/nix-substituters.nix
     ../../modules/services/mihomo.nix
   ];
 }
