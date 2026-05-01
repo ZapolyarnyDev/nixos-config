@@ -25,6 +25,10 @@ update *input:
 fmt:
   nix fmt {{ flake }}
 
+lint:
+  nix run nixpkgs#statix -- check .
+  nix run nixpkgs#deadnix -- --fail .
+
 clean:
   sudo nix-collect-garbage --delete-older-than 7d
   nix store optimise
