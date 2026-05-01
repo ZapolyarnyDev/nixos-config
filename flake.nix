@@ -1,33 +1,38 @@
 {
-	description = "Zapolyarny's NixOS config";
-	
-	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+  description = "Zapolyarny's NixOS config";
 
-		home-manager = {
-			url = "github:nix-community/home-manager/release-25.11";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-	};
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
-	outputs = { self, nixpkgs, home-manager, ... }:
-	let
-		system = "x86_64-linux";
-	in {
-		nixosConfigurations.zapolyarny-x380 = nixpkgs.lib.nixosSystem {
-			inherit system;
-			
-			modules = [
-				./hosts/zapolyarny-x380/configuration.nix
-			
-				home-manager.nixosModules.home-manager
- 				{
-					home-manager.useGlobalPkgs = true;
-					home-manager.useUserPackages = true;
-					home-manager.users.zapolyarny = import ./home/zapolyarny.nix;
-				}
-			];
-		};
+    home-manager = {
+      url = "github:nix-community/home-manager/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
-	};
+  outputs =
+    { nixpkgs, home-manager, ... }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; };
+    in
+    {
+      formatter.${system} = pkgs.nixfmt-tree;
+
+      nixosConfigurations.zapolyarny-x380 = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        modules = [
+          ./hosts/zapolyarny-x380/configuration.nix
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.zapolyarny = import ./home/zapolyarny.nix;
+          }
+        ];
+      };
+
+    };
 }
