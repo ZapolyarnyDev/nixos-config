@@ -9,7 +9,7 @@
       "--glob=!.git/*"
       "--glob=!node_modules/*"
       "--glob=!result"
-      "--glob=!resul-*"
+      "--glob=!result-*"
     ];
   };
 }

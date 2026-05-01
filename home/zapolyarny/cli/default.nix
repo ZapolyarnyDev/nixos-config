@@ -4,7 +4,7 @@
     ./eza.nix
     ./fd.nix
     ./ripgrep.nix
-    ./starship.nix
+    ./shell.nix
     ./starship.nix
   ];
 }

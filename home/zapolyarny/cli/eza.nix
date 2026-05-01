@@ -7,7 +7,7 @@
     extraOptions = [
       "--group-directories-first"
       "--header"
-      "--time-tyle=long-iso"
+      "--time-style=long-iso"
     ];
   };
 }

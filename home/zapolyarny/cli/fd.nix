@@ -5,7 +5,7 @@
 
     ignores = [
       ".git/"
-      "hode_modules/"
+      "node_modules/"
       "result"
       "result-*"
     ];
