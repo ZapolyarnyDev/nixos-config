@@ -1,11 +1,14 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  home.username = "zapolyarny"; # Meow
-  home.homeDirectory = "/home/zapolyarny";
-  home.stateVersion = "25.11";
+  home =
+    {
+      username = "zapolyarny";
+      homeDirectory = "/home/zapolyarny/";
+      stateVersion = "25.11";
+    }
 
-  programs.starship.enable = true;
+      programs.starship.enable;
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [

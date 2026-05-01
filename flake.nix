@@ -1,4 +1,5 @@
 {
+
   description = "Zapolyarny's NixOS config";
 
   inputs = {
@@ -27,9 +28,11 @@
 
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.zapolyarny = import ./home/zapolyarny.nix;
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.zapolyarny = import ./home/zapolyarny.nix;
+            };
           }
         ];
       };
