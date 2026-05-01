@@ -1,9 +1,12 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [
-      ./default.nix
-    ];
+  imports = [
+    ./default.nix
+  ];
 }
-
