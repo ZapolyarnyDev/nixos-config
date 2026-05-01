@@ -31,7 +31,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.zapolyarny = import ./home/zapolyarny.nix;
+              users.zapolyarny = import ./home/zapolyarny;
             };
           }
         ];
