@@ -31,6 +31,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              backupFileExtension = "backup";
               users.zapolyarny = import ./home/zapolyarny;
             };
           }
