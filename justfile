@@ -22,6 +22,9 @@ boot *args:
 update *input:
   nix flake update {{ input }}
 
+fmt:
+  nix fmt {{ flake }}
+
 clean:
   sudo nix-collect-garbage --delete-older-than 7d
   nix store optimise
