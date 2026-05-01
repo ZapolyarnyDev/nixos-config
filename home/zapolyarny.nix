@@ -1,15 +1,16 @@
 { pkgs, ... }:
 
 {
-  home =
-    {
-      username = "zapolyarny";
-      homeDirectory = "/home/zapolyarny/";
-      stateVersion = "25.11";
-    }
+  home = {
+    username = "zapolyarny";
+    homeDirectory = "/home/zapolyarny";
+    stateVersion = "25.11";
+  };
 
-      programs.starship.enable;
-  programs.home-manager.enable = true;
+  programs = {
+    starship.enable = true;
+    home-manager.enable = true;
+  };
 
   home.packages = with pkgs; [
     # CLI
@@ -18,7 +19,6 @@
     bat
     eza
     tmux
-    starship
     neofetch
 
     # Apps
