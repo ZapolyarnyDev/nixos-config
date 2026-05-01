@@ -3,10 +3,6 @@
 {
   home.packages = with pkgs; [
     # CLI
-    ripgrep
-    fd
-    bat
-    eza
     tmux
     neofetch
 

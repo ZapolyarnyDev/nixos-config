@@ -2,6 +2,7 @@ _:
 
 {
   imports = [
+    ./cli
     ./packages.nix
     ./programs.nix
   ];
