@@ -3,6 +3,7 @@ _:
 {
   imports = [
     ./cli
+    ./desktop
     ./packages.nix
     ./programs.nix
   ];

@@ -24,18 +24,6 @@
     libnotify
 
     # Theming
-    gtk3
     dconf
-    glib
-    arc-theme
-    papirus-icon-theme
-    papirus-folders
-
-    (catppuccin-gtk.override {
-      accents = [ "pink" ];
-      size = "standard";
-      tweaks = [ "rimless" ];
-      variant = "mocha";
-    })
   ];
 }
