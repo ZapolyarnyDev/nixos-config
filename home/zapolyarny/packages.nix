@@ -13,7 +13,6 @@
 
     # Wayland Tools
     waybar
-    hyprpaper
     grim
     slurp
     wl-clipboard
