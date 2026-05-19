@@ -25,22 +25,32 @@ in
 
     theme = {
       "*" = {
-        background = mkLiteral "#1e1e2e";
-        background-alt = mkLiteral "#313244";
-        border = mkLiteral "#f5c2e7";
-        foreground = mkLiteral "#cdd6f4";
-        muted = mkLiteral "#6c7086";
-        selected = mkLiteral "#f5c2e7";
+        base = mkLiteral "#1e1e2e";
+        mantle = mkLiteral "#181825";
+        surface0 = mkLiteral "#313244";
+        surface1 = mkLiteral "#45475a";
+        text = mkLiteral "#cdd6f4";
+        subtext0 = mkLiteral "#a6adc8";
+        overlay0 = mkLiteral "#6c7086";
+        pink = mkLiteral "#f5c2e7";
+        blue = mkLiteral "#89b4fa";
         urgent = mkLiteral "#f38ba8";
+
+        background-color = mkLiteral "transparent";
+        border-color = mkLiteral "transparent";
+        margin = 0;
+        padding = 0;
+        spacing = 0;
+        text-color = mkLiteral "@text";
       };
 
       window = {
-        background-color = mkLiteral "@background";
+        background-color = mkLiteral "@base";
         border = mkLiteral "2px";
-        border-color = mkLiteral "@border";
-        border-radius = mkLiteral "8px";
-        padding = mkLiteral "18px";
-        width = mkLiteral "42%";
+        border-color = mkLiteral "@pink";
+        border-radius = mkLiteral "10px";
+        padding = mkLiteral "20px";
+        width = mkLiteral "46%";
       };
 
       mainbox = {
@@ -53,24 +63,29 @@ in
       };
 
       inputbar = {
-        background-color = mkLiteral "@background-alt";
-        border-radius = mkLiteral "6px";
+        background-color = mkLiteral "@surface0";
+        border = mkLiteral "1px";
+        border-color = mkLiteral "@surface1";
+        border-radius = mkLiteral "8px";
         children = map mkLiteral [
           "prompt"
           "entry"
         ];
-        padding = mkLiteral "10px 12px";
-        spacing = mkLiteral "10px";
+        padding = mkLiteral "11px 14px";
+        spacing = mkLiteral "12px";
       };
 
       prompt = {
-        text-color = mkLiteral "@selected";
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "@pink";
       };
 
       entry = {
+        background-color = mkLiteral "transparent";
+        cursor-color = mkLiteral "@pink";
         placeholder = "Search";
-        placeholder-color = mkLiteral "@muted";
-        text-color = mkLiteral "@foreground";
+        placeholder-color = mkLiteral "@overlay0";
+        text-color = mkLiteral "@text";
       };
 
       listview = {
@@ -78,35 +93,51 @@ in
         columns = 1;
         fixed-height = false;
         lines = 8;
-        spacing = mkLiteral "6px";
+        spacing = mkLiteral "7px";
       };
 
       element = {
         background-color = mkLiteral "transparent";
-        border-radius = mkLiteral "6px";
+        border-radius = mkLiteral "8px";
         orientation = mkLiteral "horizontal";
-        padding = mkLiteral "8px 10px";
-        spacing = mkLiteral "10px";
+        padding = mkLiteral "9px 12px";
+        spacing = mkLiteral "12px";
       };
 
       element-icon = {
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "inherit";
         size = mkLiteral "24px";
       };
 
       element-text = {
-        text-color = mkLiteral "@foreground";
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "inherit";
         vertical-align = mkLiteral "0.5";
       };
 
-      "element selected" = {
-        background-color = mkLiteral "@background-alt";
+      "element normal normal" = {
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "@text";
       };
 
-      "element selected element-text" = {
-        text-color = mkLiteral "@selected";
+      "element alternate normal" = {
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "@text";
       };
 
-      "element urgent element-text" = {
+      "element selected normal" = {
+        background-color = mkLiteral "@surface0";
+        text-color = mkLiteral "@pink";
+      };
+
+      "element urgent normal" = {
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "@urgent";
+      };
+
+      "element selected urgent" = {
+        background-color = mkLiteral "@surface0";
         text-color = mkLiteral "@urgent";
       };
     };
