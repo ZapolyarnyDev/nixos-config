@@ -15,7 +15,6 @@
     # Wayland Tools
     waybar
     rofi
-    mako
     hyprpaper
     grim
     slurp
