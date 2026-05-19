@@ -4,7 +4,7 @@
 
     font = {
       name = "JetBrainsMono Nerd Font";
-      size = 11;
+      size = 10;
     };
 
     themeFile = "Catppuccin-Mocha";
@@ -17,7 +17,7 @@
       remember_window_size = false;
       scrollback_lines = 10000;
       update_check_interval = 0;
-      window_padding_width = 8;
+      window_padding_width = 7;
     };
 
     keybindings = {

@@ -5,8 +5,8 @@
     settings.mainBar = {
       layer = "top";
       position = "top";
-      height = 44;
-      margin = "10 14 0";
+      height = 40;
+      margin = "8 12 0";
 
       modules-left = [
         "custom/launcher"
@@ -149,7 +149,7 @@
         border: none;
         border-radius: 0;
         font-family: "JetBrainsMono Nerd Font";
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 600;
         min-height: 0;
       }
@@ -181,18 +181,18 @@
       #tray {
         background: rgba(30, 30, 46, 0.92);
         border: 1px solid rgba(245, 194, 231, 0.16);
-        border-bottom: 3px solid #313244;
-        border-radius: 12px;
-        margin: 0 4px;
-        padding: 0 13px;
+        border-bottom: 2px solid #313244;
+        border-radius: 11px;
+        margin: 0 3px;
+        padding: 0 12px;
       }
 
       #custom-launcher {
         background: linear-gradient(135deg, #f5c2e7, #89b4fa);
         border-bottom-color: #f5c2e7;
         color: #11111b;
-        font-size: 18px;
-        padding: 0 16px;
+        font-size: 17px;
+        padding: 0 15px;
       }
 
       #workspaces {
@@ -203,8 +203,8 @@
         background: transparent;
         border-radius: 9px;
         color: #6c7086;
-        margin: 6px 2px;
-        padding: 0 9px;
+        margin: 5px 2px;
+        padding: 0 8px;
       }
 
       #workspaces button:hover {
@@ -238,8 +238,8 @@
         background: rgba(24, 24, 37, 0.94);
         border-bottom-color: #f5c2e7;
         color: #f5c2e7;
-        font-size: 14px;
-        padding: 0 18px;
+        font-size: 13px;
+        padding: 0 16px;
       }
 
       #cpu {

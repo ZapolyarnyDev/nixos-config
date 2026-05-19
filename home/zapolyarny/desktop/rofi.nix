@@ -14,11 +14,14 @@ in
     extraConfig = {
       modi = "drun,run,window";
       show-icons = true;
-      icon-theme = "Papirus-Dark";
+      icon-theme = "Papirus";
+      drun-categories = "Utility;Development;Network;Office;Graphics;AudioVideo;Game;";
       drun-display-format = "{icon} {name}";
+      drun-match-fields = "name,generic,exec,categories,keywords";
       display-drun = "Applications";
       display-run = "Run";
       display-window = "Windows";
+      hide-scrollbar = true;
       matching = "fuzzy";
       sort = true;
     };
@@ -27,13 +30,17 @@ in
       "*" = {
         base = mkLiteral "#1e1e2e";
         mantle = mkLiteral "#181825";
+        crust = mkLiteral "#11111b";
         surface0 = mkLiteral "#313244";
         surface1 = mkLiteral "#45475a";
+        surface2 = mkLiteral "#585b70";
         text = mkLiteral "#cdd6f4";
         subtext0 = mkLiteral "#a6adc8";
         overlay0 = mkLiteral "#6c7086";
         pink = mkLiteral "#f5c2e7";
         blue = mkLiteral "#89b4fa";
+        lavender = mkLiteral "#b4befe";
+        teal = mkLiteral "#94e2d5";
         urgent = mkLiteral "#f38ba8";
 
         background-color = mkLiteral "transparent";
@@ -48,9 +55,9 @@ in
         background-color = mkLiteral "@base";
         border = mkLiteral "2px";
         border-color = mkLiteral "@pink";
-        border-radius = mkLiteral "10px";
-        padding = mkLiteral "20px";
-        width = mkLiteral "46%";
+        border-radius = mkLiteral "14px";
+        padding = mkLiteral "18px";
+        width = mkLiteral "44%";
       };
 
       mainbox = {
@@ -58,20 +65,21 @@ in
         children = map mkLiteral [
           "inputbar"
           "listview"
+          "mode-switcher"
         ];
-        spacing = mkLiteral "14px";
+        spacing = mkLiteral "12px";
       };
 
       inputbar = {
         background-color = mkLiteral "@surface0";
         border = mkLiteral "1px";
         border-color = mkLiteral "@surface1";
-        border-radius = mkLiteral "8px";
+        border-radius = mkLiteral "10px";
         children = map mkLiteral [
           "prompt"
           "entry"
         ];
-        padding = mkLiteral "11px 14px";
+        padding = mkLiteral "10px 13px";
         spacing = mkLiteral "12px";
       };
 
@@ -92,15 +100,17 @@ in
         background-color = mkLiteral "transparent";
         columns = 1;
         fixed-height = false;
-        lines = 8;
-        spacing = mkLiteral "7px";
+        lines = 7;
+        spacing = mkLiteral "6px";
       };
 
       element = {
         background-color = mkLiteral "transparent";
-        border-radius = mkLiteral "8px";
+        border = mkLiteral "1px";
+        border-color = mkLiteral "transparent";
+        border-radius = mkLiteral "10px";
         orientation = mkLiteral "horizontal";
-        padding = mkLiteral "9px 12px";
+        padding = mkLiteral "9px 11px";
         spacing = mkLiteral "12px";
       };
 
@@ -128,6 +138,7 @@ in
 
       "element selected normal" = {
         background-color = mkLiteral "@surface0";
+        border-color = mkLiteral "@surface1";
         text-color = mkLiteral "@pink";
       };
 
@@ -139,6 +150,26 @@ in
       "element selected urgent" = {
         background-color = mkLiteral "@surface0";
         text-color = mkLiteral "@urgent";
+      };
+
+      mode-switcher = {
+        background-color = mkLiteral "transparent";
+        spacing = mkLiteral "8px";
+      };
+
+      button = {
+        background-color = mkLiteral "@mantle";
+        border = mkLiteral "1px";
+        border-color = mkLiteral "@surface0";
+        border-radius = mkLiteral "9px";
+        padding = mkLiteral "8px 10px";
+        text-color = mkLiteral "@subtext0";
+      };
+
+      "button selected" = {
+        background-color = mkLiteral "@surface0";
+        border-color = mkLiteral "@pink";
+        text-color = mkLiteral "@pink";
       };
     };
   };

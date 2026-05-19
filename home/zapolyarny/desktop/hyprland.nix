@@ -33,22 +33,25 @@ in
       ];
 
       general = {
-        gaps_in = 6;
-        gaps_out = 10;
+        gaps_in = 7;
+        gaps_out = 11;
         border_size = 2;
-        "col.active_border" = "rgb(f5c2e7)";
+        "col.active_border" = "rgb(f5c2e7) rgb(89b4fa) 45deg";
         "col.inactive_border" = "rgb(45475a)";
       };
 
       decoration = {
-        rounding = 10;
+        rounding = 11;
+        active_opacity = 1.0;
+        inactive_opacity = 0.96;
+        fullscreen_opacity = 1.0;
 
         shadow = {
           enabled = true;
           color = "rgba(11111bdd)";
           color_inactive = "rgba(11111b00)";
-          range = 18;
-          render_power = 3;
+          range = 20;
+          render_power = 4;
         };
 
         blur = {
@@ -56,7 +59,8 @@ in
           ignore_opacity = true;
           new_optimizations = true;
           passes = 2;
-          size = 4;
+          size = 5;
+          vibrancy = 0.12;
         };
       };
 
