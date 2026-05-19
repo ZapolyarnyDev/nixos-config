@@ -1,3 +1,15 @@
+{ pkgs, ... }:
+
+let
+  brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+  grim = "${pkgs.grim}/bin/grim";
+  kitty = "${pkgs.kitty}/bin/kitty";
+  playerctl = "${pkgs.playerctl}/bin/playerctl";
+  rofi = "${pkgs.rofi}/bin/rofi";
+  slurp = "${pkgs.slurp}/bin/slurp";
+  wl-copy = "${pkgs.wl-clipboard}/bin/wl-copy";
+  wpctl = "${pkgs.wireplumber}/bin/wpctl";
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -84,8 +96,8 @@
       };
 
       bind = [
-        "$mod, Return, exec, kitty"
-        "$mod, D, exec, rofi -show drun"
+        "$mod, Return, exec, ${kitty}"
+        "$mod, D, exec, ${rofi} -show drun"
         "$mod, Q, killactive,"
         "$mod, F, fullscreen,"
         "$mod, Space, togglefloating,"
@@ -93,14 +105,15 @@
         "$mod, right, movefocus, r"
         "$mod, up, movefocus, u"
         "$mod, down, movefocus, d"
-        "$mod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
-        ", Print, exec, grim -g \"$(slurp)\" - | wl-copy"
-        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-        ", XF86AudioPlay, exec, playerctl play-pause"
-        ", XF86AudioPause, exec, playerctl play-pause"
-        ", XF86AudioNext, exec, playerctl next"
-        ", XF86AudioPrev, exec, playerctl previous"
+        "$mod, R, submap, resize"
+        "$mod SHIFT, S, exec, ${grim} -g \"$(${slurp})\" - | ${wl-copy}"
+        ", Print, exec, ${grim} -g \"$(${slurp})\" - | ${wl-copy}"
+        ", XF86AudioMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioMicMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        ", XF86AudioPlay, exec, ${playerctl} play-pause"
+        ", XF86AudioPause, exec, ${playerctl} play-pause"
+        ", XF86AudioNext, exec, ${playerctl} next"
+        ", XF86AudioPrev, exec, ${playerctl} previous"
       ]
       ++ builtins.concatLists (
         builtins.genList (
@@ -116,16 +129,36 @@
       );
 
       binde = [
-        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        ", XF86MonBrightnessUp, exec, brightnessctl set 5%+ -q"
-        ", XF86MonBrightnessDown, exec, brightnessctl set 5%- -q"
+        ", XF86AudioRaiseVolume, exec, ${wpctl} set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, ${wpctl} set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86MonBrightnessUp, exec, ${brightnessctl} set 5%+ -q"
+        ", XF86MonBrightnessDown, exec, ${brightnessctl} set 5%- -q"
       ];
 
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
       ];
+
+      submap = "reset";
     };
+
+    extraConfig = ''
+      submap = resize
+
+      binde = , left, resizeactive, -30 0
+      binde = , right, resizeactive, 30 0
+      binde = , up, resizeactive, 0 -30
+      binde = , down, resizeactive, 0 30
+      binde = , h, resizeactive, -30 0
+      binde = , l, resizeactive, 30 0
+      binde = , k, resizeactive, 0 -30
+      binde = , j, resizeactive, 0 30
+
+      bind = , escape, submap, reset
+      bind = , Return, submap, reset
+
+      submap = reset
+    '';
   };
 }
