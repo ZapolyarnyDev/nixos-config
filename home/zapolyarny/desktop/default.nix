@@ -1,6 +1,7 @@
 {
   imports = [
     ./gtk.nix
+    ./hyprland.nix
     ./hyprpaper.nix
     ./kitty.nix
     ./mako.nix

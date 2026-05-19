@@ -17,6 +17,7 @@
     wl-clipboard
     playerctl
     libnotify
+    brightnessctl
 
     # Theming
     dconf
