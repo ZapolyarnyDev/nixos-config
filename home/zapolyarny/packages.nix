@@ -12,7 +12,6 @@
     vscodium
 
     # Wayland Tools
-    waybar
     grim
     slurp
     wl-clipboard
