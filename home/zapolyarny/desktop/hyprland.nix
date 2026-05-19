@@ -98,6 +98,7 @@ in
       bind = [
         "$mod, Return, exec, ${kitty}"
         "$mod, D, exec, ${rofi} -show drun"
+        "$mod, R, exec, ${rofi} -show run"
         "$mod, Q, killactive,"
         "$mod, F, fullscreen,"
         "$mod, Space, togglefloating,"
@@ -105,7 +106,6 @@ in
         "$mod, right, movefocus, r"
         "$mod, up, movefocus, u"
         "$mod, down, movefocus, d"
-        "$mod, R, submap, resize"
         "$mod SHIFT, S, exec, ${grim} -g \"$(${slurp})\" - | ${wl-copy}"
         ", Print, exec, ${grim} -g \"$(${slurp})\" - | ${wl-copy}"
         ", XF86AudioMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle"
@@ -139,26 +139,6 @@ in
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
       ];
-
-      submap = "reset";
     };
-
-    extraConfig = ''
-      submap = resize
-
-      binde = , left, resizeactive, -30 0
-      binde = , right, resizeactive, 30 0
-      binde = , up, resizeactive, 0 -30
-      binde = , down, resizeactive, 0 30
-      binde = , h, resizeactive, -30 0
-      binde = , l, resizeactive, 30 0
-      binde = , k, resizeactive, 0 -30
-      binde = , j, resizeactive, 0 30
-
-      bind = , escape, submap, reset
-      bind = , Return, submap, reset
-
-      submap = reset
-    '';
   };
 }
