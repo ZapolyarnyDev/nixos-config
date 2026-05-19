@@ -9,7 +9,6 @@
     # Apps
     firefox
     telegram-desktop
-    kitty
     vscodium
 
     # Wayland Tools
