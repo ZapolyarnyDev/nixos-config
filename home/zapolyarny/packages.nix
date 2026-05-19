@@ -13,7 +13,6 @@
 
     # Wayland Tools
     waybar
-    rofi
     hyprpaper
     grim
     slurp
